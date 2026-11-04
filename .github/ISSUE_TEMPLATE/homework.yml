@@ -9,7 +9,10 @@ body:
         **命名：学号_姓名全拼.zip，例如 2026000001_zhangsan.zip。** 姓名使用中文姓名拼音，姓在前、名在后连写，不在姓与名之间加下划线或空格。示例学号请替换为自己的。
         ZIP 根目录必须直接包含两个文件夹：`sandbox` 放沙箱程序，`large model` 放大模型程序；`large model` 中间保留一个普通空格。
         使用自己的 GitHub 账号，一人一次作业只发一张 Issue；更正在原 Issue 评论区上传新版，ZIP 命名仍保持不变。
-        将 ZIP 拖入下方“作业 ZIP 压缩包或下载链接”，等待出现文件链接后再发布。建议 ZIP 不超过 20 MB，大文件提交可访问的下载链接。
+        只提交自己的程序源代码、必要的小型配置和依赖清单；ZIP 不得超过 20 MB。不提交模型权重、数据集、完整环境、缓存、日志、图片、视频或输出结果，不接受网盘链接代交。
+        **两个文件夹中必须各有一份环境配置 README.md：`sandbox/README.md` 和 `large model/README.md`。** 分别写清环境版本、依赖安装、配置与运行步骤。
+        请建立干净的提交副本，只复制需要的代码、配置和说明，再选中两个文件夹生成 ZIP。将 ZIP 拖入下方附件框，等待出现附件链接后再发布。
+        [更详细的注册、避免大文件、打包及上传步骤，请见仓库 README。](https://github.com/forth-apex/artificial-neural-network-2026-fall#readme)
         **本仓库公开，文件名中的学号和姓名拼音以及作业附件会公开可见。** 除课程要求信息外不要提交额外个人资料、密码或 API 密钥。
         附件先保存在 Issues，管理员之后在需要时另行整理到 main 分支，不自动汇总。
   - type: input
@@ -38,26 +41,28 @@ body:
   - type: textarea
     id: attachments
     attributes:
-      label: 作业 ZIP 压缩包或下载链接
-      description: 上传一个按要求命名的 ZIP，等待出现附件链接。大文件请粘贴该 ZIP 的下载链接及必要的访问说明、有效期。
-      placeholder: "在这里拖入 学号_姓名全拼.zip，例如 2026000001_zhangsan.zip。请保留上传后生成的链接；也可粘贴该 ZIP 的下载链接。"
+      label: 作业 ZIP 压缩包
+      description: 上传一个不超过 20 MB 的 ZIP，只含程序、必要的小型配置与依赖清单，以及两个文件夹各自的环境配置 README.md。超出时先清理再打包，不接受网盘链接代交。
+      placeholder: "在这里拖入 学号_姓名全拼.zip，例如 2026000001_zhangsan.zip。等待上传完成，并保留自动生成的附件链接。"
     validations:
       required: true
   - type: textarea
     id: notes
     attributes:
-      label: 运行说明或补充说明
-      description: 简要说明 sandbox 和 large model 两个程序的入口、运行环境、依赖及运行步骤。详细说明也可放在 ZIP 内。
-      placeholder: "sandbox：入口、环境、运行方式……；large model：入口、环境、运行方式……。请勿填写真实 API 密钥。"
+      label: 补充说明（选填）
+      description: 可写补充备注。环境配置与运行步骤必须分别写在 ZIP 内的 sandbox/README.md 和 large model/README.md，不能只填在此处。
+      placeholder: "如有补充事项请填写；两份环境配置 README.md 仍须放在对应程序文件夹内。"
   - type: checkboxes
     id: confirmations
     attributes:
       label: 提交确认
-      description: 表单不会自动检查 ZIP 文件名、内部目录、附件内容或截止时间，请自行核对。
+      description: 表单不会自动检查 ZIP 大小、文件名、目录、README 或截止时间，请自行核对。
       options:
-        - label: "ZIP 已命名为 学号_姓名全拼.zip，根目录包含 sandbox（沙箱程序）和 large model（大模型程序）两个文件夹。"
+        - label: "ZIP 不超过 20 MB，只含自己的源代码、必要的小型配置、依赖清单和说明，不含权重、数据集、环境、缓存或输出等大文件，也未用网盘链接代交。"
           required: true
-        - label: "我已填写正确的作业编号和标题，并确认附件上传完成或下载链接可访问。"
+        - label: "ZIP 已按要求命名并包含 sandbox 和 large model，两个文件夹各有对应程序和独立的环境配置 README.md。"
+          required: true
+        - label: "我已填写正确的作业编号和标题，并确认 ZIP 附件上传完成、能够下载。"
           required: true
         - label: "我已知晓学号与姓名拼音将公开，并检查作业不含额外个人资料、密码、API 密钥或未经授权的数据。"
           required: true
