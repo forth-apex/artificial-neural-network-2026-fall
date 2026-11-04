@@ -1,0 +1,60 @@
+name: "作业提交 / Homework submission"
+description: "Artificial Neural Network · Fall 2026：填写信息并上传作业，无需管理员邀请或审核。"
+title: "[作业编号] 课程代号或GitHub用户名"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 提交前请阅读
+        使用自己的 GitHub 账号，一人一次作业只提交一张 Issue；更正请在原 Issue 评论区上传新版。
+        **本仓库公开，正文和附件可能被任何人查看、下载。** 不要填写完整学号、手机号、密码或 API 密钥。
+        把附件拖入下方“作业附件或下载链接”，等待上传完成并出现链接，再点击页面底部 Create。
+        建议每次附件合计不超过 20 MB；图片每张不超过 8 MB；视频和大数据请交下载链接。
+        附件先保存在 Issues，之后由管理员在需要时整理到 main 分支。
+  - type: input
+    id: assignment
+    attributes:
+      label: 作业编号
+      description: 按老师通知填写；HW01 仅为示例。
+      placeholder: "例如 HW01"
+    validations:
+      required: true
+  - type: input
+    id: student
+    attributes:
+      label: 课程代号或 GitHub 用户名
+      description: 使用老师认可的代号，或你的 GitHub 用户名；身份对应关系私下登记。
+      placeholder: "例如 student-demo"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本号
+      value: "v1"
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 作业附件或下载链接
+      description: 将 PDF、ZIP、py 或 ipynb 拖入此输入框，等待上传完成。也可使用附件按钮；大文件粘贴下载链接及必要的访问说明、有效期。
+      placeholder: "在这里拖入作业文件，或粘贴作业下载链接。请保留上传后自动生成的文件链接。"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 作业说明和运行方法
+      description: 可写文件说明、Python 版本、依赖安装与运行步骤；非代码作业可不填。
+      placeholder: "例如：report.pdf 是报告；source.zip 是源代码；运行步骤为……"
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 提交确认
+      description: 表单不会验证附件内容或截止时间，请自行核对。
+      options:
+        - label: "我已填写正确的作业编号和标题，并确认附件上传完成或下载链接可访问。"
+          required: true
+        - label: "我已检查公开内容，不含密码、个人敏感资料或未经授权的数据。"
+          required: true
