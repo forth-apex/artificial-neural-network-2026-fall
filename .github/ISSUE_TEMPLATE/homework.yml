@@ -1,16 +1,17 @@
 name: "作业提交 / Homework submission"
-description: "Artificial Neural Network · Fall 2026：填写信息并上传作业，无需管理员邀请或审核。"
-title: "[作业编号] 课程代号或GitHub用户名"
+description: "Artificial Neural Network · Fall 2026：填写信息并上传 ZIP 作业，无需管理员邀请或审核。"
+title: "[作业编号] 学号_姓名全拼"
 body:
   - type: markdown
     attributes:
       value: |
-        ## 提交前请阅读
-        使用自己的 GitHub 账号，一人一次作业只提交一张 Issue；更正请在原 Issue 评论区上传新版。
-        **本仓库公开，正文和附件可能被任何人查看、下载。** 不要填写完整学号、手机号、密码或 API 密钥。
-        把附件拖入下方“作业附件或下载链接”，等待上传完成并出现链接，再点击页面底部 Create。
-        建议每次附件合计不超过 20 MB；图片每张不超过 8 MB；视频和大数据请交下载链接。
-        附件先保存在 Issues，之后由管理员在需要时整理到 main 分支。
+        ## ZIP 提交要求
+        **命名：学号_姓名全拼.zip，例如 2026000001_zhangsan.zip。** 姓名使用中文姓名拼音，姓在前、名在后连写，不在姓与名之间加下划线或空格。示例学号请替换为自己的。
+        ZIP 根目录必须直接包含两个文件夹：`sandbox` 放沙箱程序，`large model` 放大模型程序；`large model` 中间保留一个普通空格。
+        使用自己的 GitHub 账号，一人一次作业只发一张 Issue；更正在原 Issue 评论区上传新版，ZIP 命名仍保持不变。
+        将 ZIP 拖入下方“作业 ZIP 压缩包或下载链接”，等待出现文件链接后再发布。建议 ZIP 不超过 20 MB，大文件提交可访问的下载链接。
+        **本仓库公开，文件名中的学号和姓名拼音以及作业附件会公开可见。** 除课程要求信息外不要提交额外个人资料、密码或 API 密钥。
+        附件先保存在 Issues，管理员之后在需要时另行整理到 main 分支，不自动汇总。
   - type: input
     id: assignment
     attributes:
@@ -22,8 +23,8 @@ body:
   - type: input
     id: student
     attributes:
-      label: 课程代号或 GitHub 用户名
-      description: 使用老师认可的代号，或你的 GitHub 用户名；身份对应关系私下登记。
+      label: GitHub 用户名
+      description: 填写你当前登录的 GitHub 用户名。ZIP 文件名必须按要求包含学号和姓名全拼。
       placeholder: "例如 student-demo"
     validations:
       required: true
@@ -37,24 +38,26 @@ body:
   - type: textarea
     id: attachments
     attributes:
-      label: 作业附件或下载链接
-      description: 将 PDF、ZIP、py 或 ipynb 拖入此输入框，等待上传完成。也可使用附件按钮；大文件粘贴下载链接及必要的访问说明、有效期。
-      placeholder: "在这里拖入作业文件，或粘贴作业下载链接。请保留上传后自动生成的文件链接。"
+      label: 作业 ZIP 压缩包或下载链接
+      description: 上传一个按要求命名的 ZIP，等待出现附件链接。大文件请粘贴该 ZIP 的下载链接及必要的访问说明、有效期。
+      placeholder: "在这里拖入 学号_姓名全拼.zip，例如 2026000001_zhangsan.zip。请保留上传后生成的链接；也可粘贴该 ZIP 的下载链接。"
     validations:
       required: true
   - type: textarea
     id: notes
     attributes:
-      label: 作业说明和运行方法
-      description: 可写文件说明、Python 版本、依赖安装与运行步骤；非代码作业可不填。
-      placeholder: "例如：report.pdf 是报告；source.zip 是源代码；运行步骤为……"
+      label: 运行说明或补充说明
+      description: 简要说明 sandbox 和 large model 两个程序的入口、运行环境、依赖及运行步骤。详细说明也可放在 ZIP 内。
+      placeholder: "sandbox：入口、环境、运行方式……；large model：入口、环境、运行方式……。请勿填写真实 API 密钥。"
   - type: checkboxes
     id: confirmations
     attributes:
       label: 提交确认
-      description: 表单不会验证附件内容或截止时间，请自行核对。
+      description: 表单不会自动检查 ZIP 文件名、内部目录、附件内容或截止时间，请自行核对。
       options:
+        - label: "ZIP 已命名为 学号_姓名全拼.zip，根目录包含 sandbox（沙箱程序）和 large model（大模型程序）两个文件夹。"
+          required: true
         - label: "我已填写正确的作业编号和标题，并确认附件上传完成或下载链接可访问。"
           required: true
-        - label: "我已检查公开内容，不含密码、个人敏感资料或未经授权的数据。"
+        - label: "我已知晓学号与姓名拼音将公开，并检查作业不含额外个人资料、密码、API 密钥或未经授权的数据。"
           required: true
