@@ -4,7 +4,7 @@
 
 **使用 Issues 上传作业 ZIP 压缩包：无需管理员邀请、无需 Fork、无需安装 Git，也不需要管理员审核或合并。每位同学使用自己的 GitHub 账号。**
 
-[立即提交作业](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues/new?template=homework.yml) · [查看全部提交](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues?q=is%3Aissue)
+[立即提交作业](https://www.github.com/forth-apex/artificial-neural-network-2026-fall/issues/new?template=homework.yml) · [查看全部提交](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues?q=is%3Aissue)
 
 登录 GitHub 后，点击上方链接打开作业提交表单。
 
@@ -138,7 +138,7 @@
 
 ## 第四步：填写提交单并上传 ZIP
 
-1. 点击 [立即提交作业](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues/new?template=homework.yml)，确认仓库是 `forth-apex/artificial-neural-network-2026-fall`。页面应显示作业编号、GitHub 用户名、版本号和附件等字段，星号表示必填。
+1. 点击 [立即提交作业](https://www.github.com/forth-apex/artificial-neural-network-2026-fall/issues/new?template=homework.yml)，确认仓库是 `forth-apex/artificial-neural-network-2026-fall`。页面应显示作业编号、GitHub 用户名、版本号和附件等字段，星号表示必填。
 2. **修改标题**为 `[作业编号] 学号_姓名全拼`，例如 `[HW01] 2026000001_zhangsan`。`HW01` 只是格式示例，请使用老师实际通知的编号，不要保留模板里的提示文字。
 3. “作业编号”填老师给出的编号；“GitHub 用户名”填自己当前登录的账号；首次提交的版本号用 `v1`。
 4. 把准备好的 ZIP **拖入“作业 ZIP 压缩包”输入框内部**。也可点击该输入框下面的附件按钮（英文可能是 **Paste, drop, or click to add files**），在弹出的文件选择窗口里选择 ZIP 并打开。
