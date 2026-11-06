@@ -4,7 +4,9 @@
 
 **使用 Issues 上传作业 ZIP 压缩包：无需管理员邀请、无需 Fork、无需安装 Git，也不需要管理员审核或合并。每位同学使用自己的 GitHub 账号。**
 
-[立即提交作业](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues/new?template=homework.yml) · [查看全部提交](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues?q=is%3Aissue)
+[立即提交作业](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues/new/choose) · [查看全部提交](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues?q=is%3Aissue)
+
+打开后，选择 **作业提交 / Homework submission** 进入表单。
 
 ## 作业格式：先看这一段
 
@@ -60,7 +62,7 @@
 1. 打开 [课程仓库首页](https://github.com/forth-apex/artificial-neural-network-2026-fall)。看到 **Public** 表示仓库公开，未登录也能阅读，但提交需要登录。
 2. 如果右上角有 **Sign in**，点击并使用自己的用户名或邮箱、密码登录。忘记密码请用 **Forgot password?**，不要借管理员或其他同学的账号提交。
 3. 登录后通常能看到右上角个人头像，打开菜单可确认是不是自己的账号。不同浏览器、不同用户资料和应用侧边栏的登录状态可能不互通。
-4. 回到本页点击 **立即提交作业**。也可以点仓库顶部 **Issues → New issue → 作业提交 / Homework submission**；出现 **Get started** 时点它。
+4. 回到本页点击 **立即提交作业**，在模板选择页点 **作业提交 / Homework submission**。也可以从仓库顶部进入 **Issues → New issue**，再选择同一模板。
 5. 无需管理员邀请，也不用申请仓库写入权限或点击 Fork。
 
 ## 第三步：只整理程序，避免压缩出大文件
@@ -136,7 +138,7 @@
 
 ## 第四步：填写提交单并上传 ZIP
 
-1. 打开 [立即提交作业](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues/new?template=homework.yml)，确认仓库是 `forth-apex/artificial-neural-network-2026-fall`。页面应显示作业编号、GitHub 用户名、版本号和附件等字段，星号表示必填。
+1. 点击 [立即提交作业](https://github.com/forth-apex/artificial-neural-network-2026-fall/issues/new/choose)，选择 **作业提交 / Homework submission**，确认仓库是 `forth-apex/artificial-neural-network-2026-fall`。页面应显示作业编号、GitHub 用户名、版本号和附件等字段，星号表示必填。
 2. **修改标题**为 `[作业编号] 学号_姓名全拼`，例如 `[HW01] 2026000001_zhangsan`。`HW01` 只是格式示例，请使用老师实际通知的编号，不要保留模板里的提示文字。
 3. “作业编号”填老师给出的编号；“GitHub 用户名”填自己当前登录的账号；首次提交的版本号用 `v1`。
 4. 把准备好的 ZIP **拖入“作业 ZIP 压缩包”输入框内部**。也可点击该输入框下面的附件按钮（英文可能是 **Paste, drop, or click to add files**），在弹出的文件选择窗口里选择 ZIP 并打开。
@@ -166,7 +168,7 @@
 本课程用 Issues 提交附件，不需要 Code 页的写入权限。只要 Issue 已发布、附件可以下载，就是已经提交材料。
 
 **看不到作业表单？**
-确认登录后打开本页的“立即提交作业”，或按 Issues → New issue → 作业提交进入；若浏览器缓存旧页面，可刷新后重试。
+登录后点击本页的 **立即提交作业**，再选择 **作业提交 / Homework submission**。如果已进入空白 Issue 页面，点 **Choose a different template** 返回模板选择页。
 
 **上传失败或提示类型不支持？**
 确认是真正的 ZIP、大小不超过 20 MB 且网络正常。RAR／7z 需重新压缩为 ZIP，不能只改后缀。ZIP 过大时，按第三步清理提交副本中的权重、数据、依赖实体、缓存和输出；不接受大文件或网盘链接代交。
